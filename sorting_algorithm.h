@@ -5,9 +5,9 @@
 #include <string>
 #include <vector>
 
-class SortingAlorithm {
+class SortingAlgorithm {
 public:
-  explicit SortingAlorithm(const std::string &configFileName);
+  explicit SortingAlgorithm(const std::string &configFileName);
   void sort(TapeDevice &inputTape, TapeDevice &outputTape);
 
 private:
