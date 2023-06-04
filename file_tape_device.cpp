@@ -5,6 +5,9 @@ FileTapeDevice::FileTapeDevice(const std::string &filename)
     : filename(filename), eof(false) {
   file.open(filename, std::ios::in | std::ios::out | std::ios::binary);
 }
+FileTapeDevice::~FileTapeDevice(){
+  file.close();
+}
 
 bool FileTapeDevice::read(uint32_t &data) {
   if (file) {
