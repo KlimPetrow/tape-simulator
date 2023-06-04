@@ -26,6 +26,15 @@ bool FileTapeDevice::write(uint32_t data) {
   return false;
 }
 
+bool FileTapeDevice::rewind() {
+  if (file) {
+    file.seekg(0, std::ios::beg);
+    eof = false;
+    return true;
+  }
+  return false;
+}
+
 bool FileTapeDevice::shift() {
   if (file) {
     file.seekg(sizeof(uint32_t), std::ios::cur);
