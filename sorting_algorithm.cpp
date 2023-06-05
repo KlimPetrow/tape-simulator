@@ -1,5 +1,6 @@
 #include "sorting_algorithm.h"
 #include "tape_device.h"
+#include "file_tape_device.h"
 #include <algorithm>
 #include <cstdint>
 #include <fstream>
